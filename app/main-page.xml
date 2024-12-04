@@ -1,0 +1,51 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Tractor Tracking System" />
+    
+    <TabView selectedIndex="{{ selectedTabIndex }}" class="bg-gray-100">
+        <TabViewItem title="Operational">
+            <ListView items="{{ operationalTractors }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item p-4">
+                        <Label text="{{ modelNumber }}" class="font-bold text-lg"/>
+                        <Label text="{{ currentLocation }}" class="text-gray-600"/>
+                        <Label text="{{ assignedFarm }}" class="text-gray-500"/>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+
+        <TabViewItem title="Returned">
+            <ListView items="{{ returnedTractors }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item p-4">
+                        <Label text="{{ modelNumber }}" class="font-bold text-lg"/>
+                        <Label text="{{ currentLocation }}" class="text-gray-600"/>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+
+        <TabViewItem title="In Transit">
+            <ListView items="{{ inTransitTractors }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item p-4">
+                        <Label text="{{ modelNumber }}" class="font-bold text-lg"/>
+                        <Label text="{{ currentLocation }}" class="text-gray-600"/>
+                        <Label text="{{ assignedFarm }}" class="text-gray-500"/>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+
+        <TabViewItem title="Storage">
+            <ListView items="{{ storedTractors }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-group-item p-4">
+                        <Label text="{{ modelNumber }}" class="font-bold text-lg"/>
+                        <Label text="{{ currentLocation }}" class="text-gray-600"/>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </TabViewItem>
+    </TabView>
+</Page>
